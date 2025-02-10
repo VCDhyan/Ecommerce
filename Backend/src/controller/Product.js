@@ -31,7 +31,7 @@ productrouter.post("/",productupload.array('files'),(req,res)=>{
             stock:stock,
             email:email,
             images:images;
-        })
+        });
         res.status(200).json({message:"Product created successfully",product:nearproduct});
 
 
