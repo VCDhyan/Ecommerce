@@ -7,7 +7,7 @@ productrouter.get("/",(req,res) => {
     res.send("Product router");
 })
 
-productrouter.post("/",productupload.array('files'),(req,res)=>{
+productrouter.post("/", productupload.array('files'), async (req, res) => {
     const {name, description, category,tags,price,stock,email}=req.body;
      const images = req.files.map(file => file.path);
     try{
@@ -30,7 +30,7 @@ productrouter.post("/",productupload.array('files'),(req,res)=>{
             price:price,
             stock:stock,
             email:email,
-            images:images;
+            images:images,
         });
         res.status(200).json({message:"Product created successfully",product:nearproduct});
 
