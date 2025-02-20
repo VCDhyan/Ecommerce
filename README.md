@@ -23,12 +23,12 @@ Backend: The server will interact with MongoDB, a NoSQL database, to handle data
 
 We’ll integrate bcrypt for password hashing to ensure user data security, and the entire project will follow best practices for backend structure, focusing on scalability and maintainability.
 
-Milestone 2: Frontend Development (Login Page)
+Milestone 2: Frontend Development (Login Page)**
 For this milestone, we successfully created the Login Page using React's Create React App (CRA). To improve the user interface and design, we will be updating the layout with Tailwind CSS for styling and incorporate React-Icons for intuitive icons. Tailwind CSS will help us streamline the design process with its utility-first classes, making the UI responsive and visually appealing.
 
 The Login Page will include fields for the user's email and password, and will handle form validation, state management, and error handling for incorrect login attempts. React Icons will be utilized for visual appeal and ease of use, enhancing the overall experience.
 
-Milestone 3: Backend Structure and Initial Setup
+Milestone 3: Backend Structure and Initial Setup**
 At this stage, we’ve laid the foundation for the backend by setting up the directory structure for the project. The backend is structured as follows:
 
 src/ Directory: Contains all source code files for the server.
@@ -41,10 +41,10 @@ routers/: Defines route handlers for different API endpoints.
 utils/: Stores utility functions, including the ErrorHandler.js to manage application-level errors.
 In the index.js file, we imported Express, initialized the app, and set up basic routing and server listening. We can now handle HTTP requests through app.get and set the server to listen for incoming requests on the specified port.
 
-Milestone 4: Backend Structure and Initial Setup
+Milestone 4: Backend Structure and Initial Setup**
 creating user model, user controller and Multer support
 
-**Milestone 6
+Milestone 6
 : Backend Structure and Initial Setup** Password Encryption and User Data Storage
 
 Password Hashing:
@@ -53,82 +53,44 @@ Implement bcrypt to hash the user's password during the signup process. Ensure t
 
 Save all relevant user information (e.g., name, email, etc.) in the database. Maintain the integrity and confidentiality of the password by ensuring it remains encrypted throughout the process.
 
-**Milestone 7
+Milestone 7
 Create Login Endpoint:
 
 Accept user credentials (email/username and password). Retrieve the corresponding user from the database. Validate Password:
 
 Use bcrypt to hash the entered password. Compare it with the stored hashed password for authentication.
 
-**Milstone 8
-In this milestone we created two components called Home.jsx and productcard.jsx. product card.jsx is the template used in home.jsx to map out all the products and display them. We also added routes to the home.jsx to display it when the page loads. Based on the number of products the products are mapped and displayed.
+Milestone 8
+In this milestone we created two components called Home.jsx and productcard.jsx. product card.jsx is the template used in home.jsx to map out all the products and display them. We also added routes to the home.jsx to display it when the page loads. Based on the number of products the products are mapped and displayed.
 
-Product Management System – Milestone 12
+Milestone 9 - Product Form Creation
+Overview
 
-In this milestone, we’ll create an API endpoint to retrieve all products filtered by a user’s email and send that data to the frontend.
+In this milestone, I created a product form designed to collect all necessary details for new products. This form is essential for inputting data that will be stored in the MongoDB database and displayed on the product page, which was made in the previous milestone.
 
-We will also build a function in the frontend to fetch this filtered data and display it dynamically using the ProductCard component.
+Steps Taken
 
-Why This Milestone is Important
+Form Development: I designed and implemented a user-friendly form that allows for the input of multiple products, images along with other relevant product details such as name price description catagory tags... etc.
 
-Understanding Data Filtering: Learn how to filter data based on specific criteria (e.g., user email) and send only relevant data to the frontend.
+For this milestone I mostly worked on the frontend of the project. I created a new file named as the productform.jsx.
 
-Dynamic Data Handling: Enhance your ability to retrieve and display data dynamically using React components.
+Milestone 10
+In this milestone I created a schema for products. I made this using a new js file in the Model folder named Productmodel.js. In this I used mongoose to make the schema. I also created a new file called Products.js when I have all the program for initiating a post request that will store all the data in the database. I also used the middleware Multer to process and use the image files that would be uploaded of the product.I have made the neccessary changes to the middleware folder and Index.js to work as intended.
 
-Practical Experience with Filtering: This skill is essential for real-world applications, like showing only products created by a specific user.
+Milestone 11 and 12
+In this milestone we bridged the gap between the frontend and the backend of the productform by connecting it to mongoDB. In the first milestone we made changes to products.js to use the get router to find the data in mongo db and pass it forward to home.jsx where it would then be displayed to show the products that are present on the database. In milestone 2 we were supposed to use nodemailer but it was not done as our mentor said it was unneccesary. Then we made changes to the post router to make the form functional and make it upload new products to the database.
 
-Steps for Milestone 12
+Milestone 13
+In this milestone we made the endpoint for updation. We use the put request to carry it out. In the frontedn we added the delete and edit buttons for editing and deleteing. Also since it should only be visible to the seller we made a whole new productcard.jsx for sellers.
 
-Backend: Writing the Endpoint to Retrieve Filtered Product Data
+Milestone 14
+added an functionality to delete button to the product data and write and backend endpoint to delete the product with the use of ID. Also fixed some of the other bugs I faced which were causing unexpected behaviours and made the routing much more clear.
 
-We’ll create a GET endpoint that fetches all products associated with a specific user’s email from the database.
+Milestone 15
+In this milestone I created a new navbar that renders on all the pages. I added Navlinks for Home, productform, login and signup. I first made a new jsx file called navbar and then created the whole navbar. I also styled it using Tailwind css. I also had other issues that I fixed in home.jsx and styled productform jsx as it had no styling before.
 
-Frontend: Fetching Filtered Data from the Backend
+Milestone 16
+Created singleproduct.jsx. The pages is made to show details about the product. I also routed it and made other minor changes.
 
-On the frontend, we’ll create a function to call the new API endpoint and fetch products for a specific user email.
-
-Creating the Product Card Component
-
-This component will display each product’s details, just like in previous milestones.
-
-How This Works
-
-Backend: The GET endpoint filters the products in MongoDB by the userEmail field and returns the results.
-
-Frontend: The fetchUserProducts function fetches the filtered data based on the provided email.
-
-Dynamic Rendering: The data is passed to the ProductCard component, which renders a card for each product that belongs to the specified user.
-In this milestone, we’ll build an API endpoint to fetch all product data from the database and display it dynamically on the frontend using a reusable product card component.
-
-Why This Milestone is Important
-
-Learn to Send and Receive Data: Understand how to connect the frontend and backend to retrieve data.
-
-Dynamic Rendering: Display data dynamically by passing it to components, improving scalability and efficiency.
-
-Reusable Components: Use a single component to display multiple products without writing repetitive code.
-
-How it works :
-
-Backend: The GET endpoint fetches all products from the MongoDB database.
-
-Frontend: The fetchProducts function calls the API to get the product data.
-Product Management System
-
-This project focuses on building a simple product management feature using Node.js, Express, MongoDB, and Mongoose.
-
-You’ll create a Product Schema, set up an API endpoint to save product data, and learn how to ensure data integrity through validation.
-
-Why Product Schema and Validation Matter
-
-Product Schema: Defines how product data is structured in the database. It ensures consistency and makes it easier to manage the data.
-
-Validation: Protects your application by ensuring only valid data is stored in the database. This helps prevent errors and maintains data integrity.
-
-Features
-
-Create a product with fields like name, description, price, and image URL.
-
-Validate input data to ensure required fields are filled with the correct data types.
-
-Save the validated product data to MongoDB.
+Milestone 17 & 18
+In these two Milestones we first added the cart details to the schema. Then we also created a post request for sending the details and storing them on the database. We also created an endpoint to receive request from cart page.
