@@ -6,7 +6,7 @@ export default {
   ],
   theme: {
     fontFamily: {
-      Roboto: ['Roboto', 'Sans-serif'], // Corrected the font name
+      Roboto: ['Roboto', 'Sans-serif'], 
       Poppins: ['Poppins', 'sans-serif']
     },
     extend: {
