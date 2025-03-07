@@ -104,7 +104,7 @@ export default function CartProduct({ _id, email, images, quantity, price }) {
                             {/* < MdOutlineRemoveCircleOutline/> */}
                         </div>
                     </div>
-                </div>
+ git                </div>
             </div>
     );
 }
