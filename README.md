@@ -1,3 +1,5 @@
+Thursday
+ Thursday main
 E-Commerce Application: Backend Web Development Project
 Milestone 1: Project Overview
 Brief Overview: This project involves developing a fully functional e-commerce platform utilizing the MERN stack — MongoDB, Express, React, and Node.js. The application will be built using React's Create React App (CRA) for the front-end, MongoDB as the database solution, and Node.js with Express to handle the back-end server operations.
@@ -99,3 +101,6 @@ In these two Milestones we first added the cart details to the schema. Then we a
 create cart frontend page and display the products
 For each product add an option to increase and decrease quantity using + and - buttons.
 Create an Backend endpoint for increase and decrease quantity
+ Thursday
+ main
+ main
