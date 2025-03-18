@@ -1,10 +1,4 @@
-Thursday
-
-
-Thursday
-Thursday main
-73bb6a53972cb839144a18ce3ba457ceb03ffb30
-E-Commerce Application: Backend Web Development Project
+E-Commerce Application: Fullstack Web Development Project
 Milestone 1: Project Overview
 Brief Overview: This project involves developing a fully functional e-commerce platform utilizing the MERN stack — MongoDB, Express, React, and Node.js. The application will be built using React's Create React App (CRA) for the front-end, MongoDB as the database solution, and Node.js with Express to handle the back-end server operations.
 
