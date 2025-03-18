@@ -3,10 +3,12 @@ const userModel = require("../Model/userModel");
 const { upload } = require("../../multer");
 const jwt = require('jsonwebtoken');
 const bcrypt = require("bcrypt");
+const catchAsyncError = require('../Middleware/catchAsyncError');
 const userrouter = Router();
-const AsyncError = require('../Middleware/catchAsyncError');
 const auth = require("../Middleware/auth");
 require('dotenv').config({  path:'./src/config/.env'});
+
+
 
 const secret = process.env.secretkey;
 
