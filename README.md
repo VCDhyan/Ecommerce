@@ -1,10 +1,9 @@
-<<<<<<< HEAD
- Thursday
+Thursday
 
-=======
+
 Thursday
  Thursday main
->>>>>>> 73bb6a53972cb839144a18ce3ba457ceb03ffb30
+73bb6a53972cb839144a18ce3ba457ceb03ffb30
 E-Commerce Application: Backend Web Development Project
 Milestone 1: Project Overview
 Brief Overview: This project involves developing a fully functional e-commerce platform utilizing the MERN stack — MongoDB, Express, React, and Node.js. The application will be built using React's Create React App (CRA) for the front-end, MongoDB as the database solution, and Node.js with Express to handle the back-end server operations.
@@ -30,12 +29,12 @@ Backend: The server will interact with MongoDB, a NoSQL database, to handle data
 
 We’ll integrate bcrypt for password hashing to ensure user data security, and the entire project will follow best practices for backend structure, focusing on scalability and maintainability.
 
-Milestone 2: Frontend Development (Login Page)**
+## Milestone 2: Frontend Development (Login Page)
 For this milestone, we successfully created the Login Page using React's Create React App (CRA). To improve the user interface and design, we will be updating the layout with Tailwind CSS for styling and incorporate React-Icons for intuitive icons. Tailwind CSS will help us streamline the design process with its utility-first classes, making the UI responsive and visually appealing.
 
 The Login Page will include fields for the user's email and password, and will handle form validation, state management, and error handling for incorrect login attempts. React Icons will be utilized for visual appeal and ease of use, enhancing the overall experience.
 
-Milestone 3: Backend Structure and Initial Setup**
+## Milestone 3: Backend Structure and Initial Setup
 At this stage, we’ve laid the foundation for the backend by setting up the directory structure for the project. The backend is structured as follows:
 
 src/ Directory: Contains all source code files for the server.
@@ -48,7 +47,7 @@ routers/: Defines route handlers for different API endpoints.
 utils/: Stores utility functions, including the ErrorHandler.js to manage application-level errors.
 In the index.js file, we imported Express, initialized the app, and set up basic routing and server listening. We can now handle HTTP requests through app.get and set the server to listen for incoming requests on the specified port.
 
-Milestone 4: Backend Structure and Initial Setup**
+## Milestone 4: Backend Structure and Initial Setup
 creating user model, user controller and Multer support
 
 Milestone 6
@@ -102,10 +101,14 @@ Created singleproduct.jsx. The pages is made to show details about the product. 
 Milestone 17 & 18
 In these two Milestones we first added the cart details to the schema. Then we also created a post request for sending the details and storing them on the database. We also created an endpoint to receive request from cart page.
 
-## Milestone 19
-create cart frontend page and display the products
-For each product add an option to increase and decrease quantity using + and - buttons.
-Create an Backend endpoint for increase and decrease quantity
- Thursday
- main
- main
+Milestone 19
+create cart frontend page and display the products For each product add an option to increase and decrease quantity using + and - buttons. Create an Backend endpoint for increase and decrease quantity
+
+Milestone 23
+Create an placeorder button inside cart page and navigate to select address page when clicked. Create and select address page that will display all the available address and have an option to select one address. Write an backend endpoint that will send all the addresses of the user.
+
+Milestone 27
+You need to create an my-orders page You will send an get request to my-orders endpoint that we created in previous milestone. We will send user mail in to endpoint to get all the user orders Display all the user orders We will add my-orders page in navbar for better navigation.
+
+Milestone 21
+create address form frontend page Create an state that will store input address when we click on add address in profile it should navigate to this form page.
