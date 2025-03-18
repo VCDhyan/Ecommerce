@@ -1,9 +1,8 @@
 Thursday
-Thursday
 
 
 Thursday
- Thursday main
+Thursday main
 73bb6a53972cb839144a18ce3ba457ceb03ffb30
 E-Commerce Application: Backend Web Development Project
 Milestone 1: Project Overview
