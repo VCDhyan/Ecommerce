@@ -1,15 +1,14 @@
-
 import { useEffect, useState } from "react";
 import axios from "axios";
 
 const MyOrders = () => {
     const [orders, setOrders] = useState([]);
-    const userEmail = "user@example.com"; // Replace with actual user email (from auth)
+    const userEmail = "user@example.com"; 
 
     useEffect(() => {
         const fetchOrders = async () => {
             try {
-                const response = await axios.get("http://localhost:5000/my-orders", {
+                const response = await axios.get("http://localhost:3000/my-orders", {
                     params: { email: userEmail },
                 });
                 setOrders(response.data);

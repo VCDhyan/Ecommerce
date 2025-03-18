@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { fetchUserProfile } from "../services/api";
 import AddressCard from "../components/AddressCard";
@@ -23,8 +22,19 @@ export default function Profile() {
         <div className="w-full h-max text-2xl text-neutral-100 text-left">
           PICTURE
         </div>
-        
-  
+        <img
+          src={
+            personalDetails.avatarUrl
+              ? `http:///${personalDetails.avatarUrl}`
+              : `https://xyz.jpg`
+          }
+          alt="profile"
+          className="w-40 h-40 rounded-full"
+          onError={(e) => {
+            e.target.onerror = null; // Prevents infinite loop if the default image also fail
+            e.target.src = `https:.jpg`;
+          }}
+        />
       </div>
 
       {/* Personal Details Section */}
