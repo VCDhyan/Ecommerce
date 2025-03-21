@@ -1,7 +1,8 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import NavBar from '../components/auth/nav';
 import { useLocation, useNavigate } from 'react-router-dom';
-
+import { PayPalScriptProvider, PayPalButtons } from "@paypal/react-paypal-js";
 const OrderConfirmation = () => {
     const location = useLocation();
     const navigate = useNavigate();
@@ -28,10 +29,10 @@ const OrderConfirmation = () => {
                 const address = addressData.addresses.find(addr => addr._id === addressId);
                 if (!address) {
                     throw new Error('Selected address not found.');
-                }
+                }  
                 setSelectedAddress(address);
                 // Fetch cart products from /cartproducts endpoint
-                const cartResponse = await axios.get('http://localhost:3000//product/getcart', {
+                const cartResponse = await axios.get('http://localhost:3000/product/getcart', {
                     params: { email: email },
                 });
                 if (cartResponse.status !== 200) {
@@ -159,6 +160,19 @@ const OrderConfirmation = () => {
                         <div className='p-4 border rounded-md'>
                             <p>Cash on Delivery</p>
                         </div>
+                        
+                        <PayPalScriptProvider options={{ clientId: "ASzWeA47KbPHdclv6yXYjVv_e7TQoCPZAnvU1Z3Dj1eshMh0NMvyvIsfg6JThmyHD3gjiIXSWh5F7HKC" }}>
+                             <PayPalButtons style={{ layout: "horizontal" }} 
+                                 createOrder={(data,actions)=>{
+                                    return actions.order.create({purchase_units:[{amount:{value:totalPrice.toFixed(2)}}]})
+                                 }}
+                                 onApprove={(data, actions) => {
+                                    return actions.order.capture().then((details) => {
+                                        alert(`Transaction completed by ${details.payer.name.given_name}`);
+                                    });
+                                 }}
+                             />
+                        </PayPalScriptProvider>
                     </div>
                     {/* Place Order Button */}
                     <div className='flex justify-center'>
